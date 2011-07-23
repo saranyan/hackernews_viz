@@ -1,0 +1,5 @@
+- feed["items"].each do |f|
+	%div{:class => "element hackernews isotope-item","data-symbol" => "news", "data-category" => "news", "rel"=> f["url"]}
+		%h3.symbol= f["title"]
+		%p.weight= f["points"]
+		

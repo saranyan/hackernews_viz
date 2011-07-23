@@ -1,0 +1,14 @@
+
+#dashboard-title
+	%h1= "Hackerviz"
+	%h4
+		= "Visualizing Hackernews - Built by Saranyan"
+		- if @feed != nil
+			= link_to "Next Page", {:action => "next_page", "np" => @feed["nextId"]}, :class => "defring", :remote => true
+#loading-image
+	= image_tag "ajax-loader.gif"
+
+%div{:id =>"isotope-container", :class => "clickable clearfix"}
+	- if @feed != nil
+		= render(:partial => "search_results", :locals => { :feed => @feed})
+
