@@ -17,9 +17,9 @@ class HomeController < ApplicationController
  def news_search(page=nil)
     
      base_url = "http://api.ihackernews.com/page"
-      # if page != nil
-      #        base_url = "http://api.ihackernews.com/page/#{page}"
-      #      end
+     if page != nil
+          base_url = "http://api.ihackernews.com/page/#{page}"
+    end
      
      #url = "#{base_url}&query=#{URI.encode(query)}&results=#{results}&start=#{start}"
      url = base_url
@@ -46,6 +46,7 @@ class HomeController < ApplicationController
   def next_page
     next_page_params = params["np"]
     @feed,@np = news_search(next_page_params)
+     @feed.sort! { |a,b| b["points"] <=> a["points"] }
   end
 
 end

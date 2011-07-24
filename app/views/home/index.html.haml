@@ -1,12 +1,13 @@
-.span-22
+.span-22.push-3
 	#dashboard-title
 		%h1= "Hackerviz"
 		%h4
 			= "Visualizing Hackernews - Built by Saranyan"
-			- if @feed != nil
-				= link_to "Next Page", {:action => "next_page", "np" => @np.to_s}, :class => "defring", :remote => true
-	#loading-image
-		= image_tag "ajax-loader.gif"
+			%span{:id => "nextpage"}
+				- if @feed != nil
+					= link_to "Next Page", {:action => "next_page", "np" => @np.to_s}, :class => "defring", :remote => true
+		#loading-image
+			= image_tag "ajax-loader.gif"
 
 	%div{:id =>"isotope-container", :style => "display:none"}
 		- if @feed != nil

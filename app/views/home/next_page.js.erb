@@ -1,3 +1,5 @@
 $("#isotope-container").html("<%= escape_javascript(render(:partial => "search_results",
     :locals => { :feed => @feed
     }) ) %>");
+var np = "<%= @np %>"
+$("#nextpage").html('<a class="defring" data-remote="true" href="/next_page?np='+ np +'">Next Page</a>');
