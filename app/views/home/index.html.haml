@@ -6,6 +6,7 @@
 			%span{:id => "nextpage"}
 				- if @feed != nil
 					= link_to "Next Page", {:action => "next_page", "np" => @np.to_s}, :class => "defring", :remote => true
+			= link_to "About", "http://saranyan.com/post/123456/hackerviz",:target =>'_blank'
 		#loading-image
 			= image_tag "ajax-loader.gif"
 
