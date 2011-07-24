@@ -29,7 +29,7 @@ $(document).ready(function() {
 			
 		}); */
   
-$('.element').live('click', function(e){
+$('.element').click(function(e){
 	window.onbeforeunload = function () {                       
          return "Moving away from here. Sure?";
     }
@@ -115,7 +115,7 @@ jQuery(function($) {
 					sortAscending : false
 				});*/
 
-		$('.element').live('click', function(){
+		$('.element').click( function(){
 
 					window.onbeforeunload = function () {                       
 				         return "Moving away from here. Sure?";
