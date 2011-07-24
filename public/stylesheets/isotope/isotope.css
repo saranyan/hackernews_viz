@@ -11,27 +11,6 @@
   z-index: 1;
 }
 
-/**** Isotope CSS3 transitions ****/
-/*
-.isotope,
-.isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-          transition-property:         transform, opacity;
-}
-*/
 /* End: Recommended Isotope styles */
 
 /**** disabling Isotope CSS3 transitions ****/
@@ -136,7 +115,7 @@ body {
 }
 
 #isotope-container {
-  width: 90%;
+  width: 100%;
   
   /*border: 1px solid #666;*/
   /*background-image:url('images/background1.jpg');*/
@@ -144,8 +123,9 @@ body {
   /*padding: 5px;*/
   padding-left: 45px;
   /*margin-bottom: 20px;*/
-  position: absolute;
+  position: relative;
 }
+
 
 .element {
   /*width: 110px;*/
@@ -855,6 +835,8 @@ code .nd { color: #9FAD7E; } /* CSS pseudo selector */
  
 .color-shape.wide, .color-shape.big { width: 150px; }
 .color-shape.tall, .color-shape.big { height: 150px; }
+
+
 
 
 
