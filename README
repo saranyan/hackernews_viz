@@ -6,3 +6,8 @@ Coded this up sometime back. I used iframes to render the links at that time. Up
 
 http://hackerviz.heroku.com
 
+To do -
+
+1. Update to Bootstrap
+2. Remove iFrames and use readability or similar to present content
+3. more...rails 3.2, etc
